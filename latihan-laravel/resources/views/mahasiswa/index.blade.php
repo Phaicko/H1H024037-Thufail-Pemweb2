@@ -1,8 +1,7 @@
 @extends('layouts.app')
 @section('judul', 'Daftar Mahasiswa')
 <x-kartu-info judul="Informasi">
-Data pada halaman ini masih berupa array statis. Pada modul
-berikutnya data akan diambil dari basis data.
+Pilih mahasiswa untuk melihat mata kuliah yang diambil beserta nilainya.
 </x-kartu-info>
 @section('konten')
 <h1 class="h3 mb-4">Daftar Mahasiswa</h1>
@@ -19,11 +18,11 @@ berikutnya data akan diambil dari basis data.
     <tbody>
         @forelse ($daftarMahasiswa as $mahasiswa)
         <tr>
-            <td>{{ $mahasiswa['nim'] }}</td>
-            <td>{{ $mahasiswa['nama'] }}</td>
-            <td>{{ $mahasiswa['angkatan'] }}</td>
+            <td>{{ $mahasiswa->nim }}</td>
+            <td>{{ $mahasiswa->nama }}</td>
+            <td>{{ $mahasiswa->angkatan }}</td>
             <td>
-                <a href="{{ route('mahasiswa.show', $mahasiswa['nim']) }}" class="btn btn-sm btn-primary">
+                <a href="{{ route('mahasiswa.show', $mahasiswa->nim) }}" class="btn btn-sm btn-primary">
                     Detail
                 </a>
             </td>

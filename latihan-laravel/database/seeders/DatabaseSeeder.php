@@ -2,24 +2,24 @@
 
 namespace Database\Seeders;
 
-use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\Mahasiswa;
+use App\Models\Matakuliah;
 
 class DatabaseSeeder extends Seeder
 {
-    use WithoutModelEvents;
-
-    /**
-     * Seed the application's database.
-     */
     public function run(): void
     {
-        // User::factory(10)->create();
+        $this->call(ProgramStudiSeeder::class);
+        $this->call(MatakuliahSeeder::class);
+        $mahasiswa = Mahasiswa::factory()->count(30)->create();
+        $matakuliah = Matakuliah::all();
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-        ]);
+        foreach ($mahasiswa as $item) {
+            $item->matakuliah()->attach($matakuliah->random(min(3, $matakuliah->count()))->mapWithKeys(
+                fn(Matakuliah $mataKuliah) => [$mataKuliah->id => ['nilai' => fake()->randomElement(['A', 'AB', 'B', 'BC'])]]
+            ));
+        }
     }
 }

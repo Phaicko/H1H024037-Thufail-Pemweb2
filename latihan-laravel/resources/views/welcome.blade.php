@@ -29,6 +29,13 @@
         <div class ="text-center">
             <a href="/matakuliah" class="text-[#706f6c] text-[13px] leading-[20px]">Tugass</a>
         </div>
+        <div class ="text-center">
+            <a href="/mahasiswa-data" class="text-[#706f6c] text-[13px] leading-[20px]">Tugasss</a>
+        </div>
+        <div class ="text-center">
+        <a href="/mahasiswa" class="text-[#706f6c] text-[13px] leading-[20px]">Mahasiswa</a>
+        </div>
+        <div class ="text-center">
         @if (Route::has('login'))
             <div class="h-14.5 hidden lg:block"></div>
         @endif

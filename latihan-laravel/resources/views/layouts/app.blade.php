@@ -13,6 +13,12 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="/">Pemweb II</a>
+            <a class="btn btn-outline-light btn-sm" href="{{ route('mahasiswa.index') }}">
+                Daftar Mahasiswa
+            </a>
+            <a class="btn btn-outline-light btn-sm" href="{{ route('mahasiswa.top-ipk') }}">
+                Top 10 IPK
+            </a>
         </div>
     </nav>
     <main class="container py-4">
