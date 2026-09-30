@@ -10,9 +10,6 @@ class MahasiswaWebController extends Controller
 {
     public function index()
     {
-        DB::listen(function ($kueri) {
-            logger($kueri->sql);
-        });
         $daftarMahasiswa = Mahasiswa::with('programStudi')
             ->orderBy('nama')
             ->paginate(10);

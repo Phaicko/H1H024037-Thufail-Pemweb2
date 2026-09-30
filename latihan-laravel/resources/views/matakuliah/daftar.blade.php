@@ -20,18 +20,19 @@
     <tbody>
         @forelse ($daftarMatakuliah as $matakuliah)
         <tr>
-            <td>{{ $matakuliah['kode'] }}</td>
-            <td>{{ $matakuliah['nama'] }}</td>
-            <x-sks :sks="$matakuliah['sks']" />
+            <td>{{ $matakuliah->kode }}</td>
+            <td>{{ $matakuliah->nama }}</td>
+            <x-sks :sks="$matakuliah->sks" />
             <td>
-            <a href="{{ route('matakuliah.show', $matakuliah['kode']) }}" class="btn btn-sm btn-primary">
+            <a href="{{ route('matakuliah.show', $matakuliah->kode) }}" class="btn btn-sm btn-primary">
                 Detail
             </a></td>
         </tr>
         @empty
         <tr>
-            <td colspan="3">Data belum tersedia</td>
+            <td colspan="4">Data belum tersedia</td>
         </tr>
         @endforelse
 </tbody>
+</table>
 @endsection

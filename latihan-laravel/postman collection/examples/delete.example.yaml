@@ -1,0 +1,39 @@
+$kind: http-example
+request:
+  url: http://127.0.0.1:8000/api/matakuliah/TEST2
+  method: DELETE
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  body:
+    type: json
+    content: "{\r
+
+      \  \"kode\": \"TEST2\",\r
+
+      \  \"nama\": \"(┬┬﹏┬┬)\",\r
+
+      \  \"sks\": 5,\r
+
+      \  \"semester\": 5\r
+
+      }"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    host: 127.0.0.1:8000
+    connection: close
+    x-powered-by: PHP/8.4.25
+    cache-control: no-cache, private
+    date: Wed, 30 Sep 2026 15:00:17 GMT
+    content-type: application/json
+    access-control-allow-origin: "*"
+  body:
+    type: json
+    content: |-
+      {
+        "sukses": true,
+        "pesan": "Data matakuliah berhasil dihapus"
+      }
+order: 4329102064146818

@@ -1,0 +1,35 @@
+$kind: http-request
+url: http://127.0.0.1:8000/api/mahasiswa?fields=nim,program_studi
+method: GET
+headers:
+  Content-Type: application/json
+  Accept: application/json
+queryParams:
+  fields: nim,program_studi
+body:
+  type: json
+  content: "{\r
+
+    \  \"kode\": \"TEST2\",\r
+
+    \  \"nama\": \"(┬┬﹏┬┬)\",\r
+
+    \  \"sks\": 5,\r
+
+    \  \"semester\": 5\r
+
+    }"
+scripts:
+  - type: afterResponse
+    code: |
+      pm.test("Status code is 422", function () {
+          pm.response.to.have.status(422);
+      });
+
+      pm.test("Response indicates failure due to duplicate code", function () {
+          var jsonData = pm.response.json();
+          pm.expect(jsonData.sukses).to.be.false;
+          pm.expect(jsonData.galat).to.have.property("kode");
+      });
+examples: .resources/pemweb2-tugas1.resources/examples
+order: 1790778444606
