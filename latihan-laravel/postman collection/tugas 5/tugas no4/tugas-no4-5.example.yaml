@@ -1,0 +1,298 @@
+$kind: http-example
+request:
+  url: http://127.0.0.1:8000/api/mahasiswa/1
+  method: DELETE
+  headers:
+    Accept: application/json
+    Content-Type: application/json
+    Authorization: Bearer 7|Rr3Yy4Z0aIbV6VYJrJ0dlzhPHMw3fpz1UMwYuGdw41511008
+  body:
+    type: json
+    content: ""
+response:
+  statusCode: 403
+  statusText: Forbidden
+  headers:
+    host: 127.0.0.1:8000
+    connection: close
+    x-powered-by: PHP/8.4.26
+    cache-control: no-cache, private
+    date: Wed, 07 Oct 2026 15:44:03 GMT
+    content-type: application/json
+    access-control-allow-origin: "*"
+  body:
+    type: json
+    content: |-
+      {
+        "message": "Invalid ability provided.",
+        "exception": "Symfony\\Component\\HttpKernel\\Exception\\AccessDeniedHttpException",
+        "file": "C:\\Users\\user\\Herd\\pemweb2\\latihan-laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php",
+        "line": 777,
+        "trace": [
+          {
+            "file": "C:\\Users\\user\\Herd\\pemweb2\\latihan-laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php",
+            "line": 721,
+            "function": "prepareException",
+            "class": "Illuminate\\Foundation\\Exceptions\\Handler",
+            "type": "->"
+          },
+          {
+            "file": "C:\\Users\\user\\Herd\\pemweb2\\latihan-laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 51,
+            "function": "render",
+            "class": "Illuminate\\Foundation\\Exceptions\\Handler",
+            "type": "->"
+          },
+          {
+            "file": "C:\\Users\\user\\Herd\\pemweb2\\latihan-laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 224,
+            "function": "handleException",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+          },
+          {
+            "file": "C:\\Users\\user\\Herd\\pemweb2\\latihan-laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php",
+            "line": 52,
+            "function": "{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():194}:195}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+          },
+          {
+            "file": "C:\\Users\\user\\Herd\\pemweb2\\latihan-laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 219,
+            "function": "handle",
+            "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
+            "type": "->"
+          },
+          {
+            "file": "C:\\Users\\user\\Herd\\pemweb2\\latihan-laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Middleware\\Authenticate.php",
+            "line": 63,
+            "function": "{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():194}:195}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+          },
+          {
+            "file": "C:\\Users\\user\\Herd\\pemweb2\\latihan-laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 219,
+            "function": "handle",
+            "class": "Illuminate\\Auth\\Middleware\\Authenticate",
+            "type": "->"
+          },
+          {
+            "file": "C:\\Users\\user\\Herd\\pemweb2\\latihan-laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 137,
+            "function": "{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():194}:195}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+          },
+          {
+            "file": "C:\\Users\\user\\Herd\\pemweb2\\latihan-laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 821,
+            "function": "then",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+          },
+          {
+            "file": "C:\\Users\\user\\Herd\\pemweb2\\latihan-laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 800,
+            "function": "runRouteWithinStack",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+          },
+          {
+            "file": "C:\\Users\\user\\Herd\\pemweb2\\latihan-laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 764,
+            "function": "runRoute",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+          },
+          {
+            "file": "C:\\Users\\user\\Herd\\pemweb2\\latihan-laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 753,
+            "function": "dispatchToRoute",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+          },
+          {
+            "file": "C:\\Users\\user\\Herd\\pemweb2\\latihan-laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "line": 200,
+            "function": "dispatch",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+          },
+          {
+            "file": "C:\\Users\\user\\Herd\\pemweb2\\latihan-laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 180,
+            "function": "{closure:Illuminate\\Foundation\\Http\\Kernel::dispatchToRouter():197}",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "->"
+          },
+          {
+            "file": "C:\\Users\\user\\Herd\\pemweb2\\latihan-laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
+            "line": 21,
+            "function": "{closure:Illuminate\\Pipeline\\Pipeline::prepareDestination():178}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+          },
+          {
+            "file": "C:\\Users\\user\\Herd\\pemweb2\\latihan-laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php",
+            "line": 31,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+            "type": "->"
+          },
+          {
+            "file": "C:\\Users\\user\\Herd\\pemweb2\\latihan-laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 219,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull",
+            "type": "->"
+          },
+          {
+            "file": "C:\\Users\\user\\Herd\\pemweb2\\latihan-laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
+            "line": 21,
+            "function": "{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():194}:195}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+          },
+          {
+            "file": "C:\\Users\\user\\Herd\\pemweb2\\latihan-laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php",
+            "line": 51,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+            "type": "->"
+          },
+          {
+            "file": "C:\\Users\\user\\Herd\\pemweb2\\latihan-laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 219,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\TrimStrings",
+            "type": "->"
+          },
+          {
+            "file": "C:\\Users\\user\\Herd\\pemweb2\\latihan-laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\ValidatePostSize.php",
+            "line": 27,
+            "function": "{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():194}:195}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+          },
+          {
+            "file": "C:\\Users\\user\\Herd\\pemweb2\\latihan-laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 219,
+            "function": "handle",
+            "class": "Illuminate\\Http\\Middleware\\ValidatePostSize",
+            "type": "->"
+          },
+          {
+            "file": "C:\\Users\\user\\Herd\\pemweb2\\latihan-laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php",
+            "line": 110,
+            "function": "{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():194}:195}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+          },
+          {
+            "file": "C:\\Users\\user\\Herd\\pemweb2\\latihan-laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 219,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance",
+            "type": "->"
+          },
+          {
+            "file": "C:\\Users\\user\\Herd\\pemweb2\\latihan-laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php",
+            "line": 74,
+            "function": "{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():194}:195}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+          },
+          {
+            "file": "C:\\Users\\user\\Herd\\pemweb2\\latihan-laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 219,
+            "function": "handle",
+            "class": "Illuminate\\Http\\Middleware\\HandleCors",
+            "type": "->"
+          },
+          {
+            "file": "C:\\Users\\user\\Herd\\pemweb2\\latihan-laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php",
+            "line": 58,
+            "function": "{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():194}:195}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+          },
+          {
+            "file": "C:\\Users\\user\\Herd\\pemweb2\\latihan-laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 219,
+            "function": "handle",
+            "class": "Illuminate\\Http\\Middleware\\TrustProxies",
+            "type": "->"
+          },
+          {
+            "file": "C:\\Users\\user\\Herd\\pemweb2\\latihan-laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks.php",
+            "line": 22,
+            "function": "{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():194}:195}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+          },
+          {
+            "file": "C:\\Users\\user\\Herd\\pemweb2\\latihan-laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 219,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks",
+            "type": "->"
+          },
+          {
+            "file": "C:\\Users\\user\\Herd\\pemweb2\\latihan-laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\ValidatePathEncoding.php",
+            "line": 28,
+            "function": "{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():194}:195}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+          },
+          {
+            "file": "C:\\Users\\user\\Herd\\pemweb2\\latihan-laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 219,
+            "function": "handle",
+            "class": "Illuminate\\Http\\Middleware\\ValidatePathEncoding",
+            "type": "->"
+          },
+          {
+            "file": "C:\\Users\\user\\Herd\\pemweb2\\latihan-laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 137,
+            "function": "{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():194}:195}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+          },
+          {
+            "file": "C:\\Users\\user\\Herd\\pemweb2\\latihan-laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "line": 175,
+            "function": "then",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+          },
+          {
+            "file": "C:\\Users\\user\\Herd\\pemweb2\\latihan-laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "line": 144,
+            "function": "sendRequestThroughRouter",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "->"
+          },
+          {
+            "file": "C:\\Users\\user\\Herd\\pemweb2\\latihan-laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php",
+            "line": 1227,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "->"
+          },
+          {
+            "file": "C:\\Users\\user\\Herd\\pemweb2\\latihan-laravel\\public\\index.php",
+            "line": 20,
+            "function": "handleRequest",
+            "class": "Illuminate\\Foundation\\Application",
+            "type": "->"
+          },
+          {
+            "file": "C:\\Users\\user\\Herd\\pemweb2\\latihan-laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php",
+            "line": 23,
+            "function": "require_once"
+          }
+        ]
+      }
+order: 4412408154059946

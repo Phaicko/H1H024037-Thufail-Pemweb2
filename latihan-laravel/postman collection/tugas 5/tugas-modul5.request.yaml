@@ -1,0 +1,13 @@
+$kind: http-request
+description: ""
+url: http://127.0.0.1:8000/api/auth/password
+method: PUT
+headers:
+  Accept: application/json
+  Content-Type: application/json
+  Authorization: Bearer 7|Rr3Yy4Z0aIbV6VYJrJ0dlzhPHMw3fpz1UMwYuGdw41511008
+body:
+  type: json
+  content: '{"current_password":"test123","password":"testtest123","password_confirmation":"testtest123"}'
+examples: .resources/tugas-modul5.resources/examples
+order: 4331641648013389

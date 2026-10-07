@@ -1,0 +1,41 @@
+$kind: http-example
+request:
+  url: http://127.0.0.1:8000/api/auth/login
+  method: POST
+  headers:
+    Accept: application/json
+    Content-Type: application/json
+    Authorization: Bearer 7|Rr3Yy4Z0aIbV6VYJrJ0dlzhPHMw3fpz1UMwYuGdw41511008
+  body:
+    type: json
+    content: '{"email":"test@unsoed.ac.id","password":"testtest1"}'
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    host: 127.0.0.1:8000
+    connection: close
+    x-powered-by: PHP/8.4.26
+    cache-control: no-cache, private
+    date: Wed, 07 Oct 2026 15:41:52 GMT
+    content-type: application/json
+    x-ratelimit-limit: "5"
+    x-ratelimit-remaining: "4"
+    access-control-allow-origin: "*"
+  body:
+    type: json
+    content: |-
+      {
+        "sukses": true,
+        "pesan": "Login berhasil",
+        "data": {
+          "pengguna": {
+            "id": 2,
+            "nama": "test",
+            "email": "test@unsoed.ac.id",
+            "peran": "mahasiswa"
+          },
+          "token": "8|bNyLQxlHx15JOg2hmXaw9brSmPiBSFYTi1Pc7uaee3fa2fb4"
+        }
+      }
+order: 2520235577649407

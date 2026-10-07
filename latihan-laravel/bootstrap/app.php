@@ -5,7 +5,10 @@ use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
 use Illuminate\Http\Request; 
 use Illuminate\Validation\ValidationException; 
+use App\Http\Middleware\PeranAdmin;
+use Laravel\Sanctum\Http\Middleware\CheckForAnyAbility;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+use Illuminate\Auth\AuthenticationException;
 return Application::configure(basePath: dirname(__DIR__))
     ->withRouting(
         web: __DIR__ . '/../routes/web.php',
@@ -14,7 +17,10 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware): void {
-        //
+        $middleware->alias([
+            'ability' => CheckForAnyAbility::class,
+            'peran-admin' => PeranAdmin::class,
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
         $exceptions->render(function (NotFoundHttpException $e, Request $request) {
@@ -33,5 +39,13 @@ return Application::configure(basePath: dirname(__DIR__))
                     'galat' => $e->errors(),
                 ], 422);
             }
+        });
+        $exceptions->render(function (AuthenticationException $e, Request $request) { 
+            if ($request->is('api/*')) { 
+                return response()->json([ 
+                    'sukses' => false, 
+                    'pesan' => 'Token tidak valid atau belum dikirim', 
+                ], 401); 
+            } 
         });
     })->create();

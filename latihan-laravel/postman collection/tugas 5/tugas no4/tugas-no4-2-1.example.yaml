@@ -1,0 +1,43 @@
+$kind: http-example
+name: tugas-no4-2
+request:
+  url: http://127.0.0.1:8000/api/auth/login
+  method: POST
+  headers:
+    - key: Accept
+      value: application/json
+      disabled: false
+    - key: Content-Type
+      value: application/json
+      disabled: false
+    - key: Authorization
+      value: Bearer 7|Rr3Yy4Z0aIbV6VYJrJ0dlzhPHMw3fpz1UMwYuGdw41511008
+      disabled: true
+    - key: Authorization
+      value: Bearer 11|T3kXaB8mpJdF5AoRprUGOFwezaiYaRUEkMmwSvsz8fd76e28
+      disabled: true
+      description: ""
+  body:
+    type: json
+    content: '{"email":"test@unsoed.ac.id","password":"testtest"}'
+response:
+  statusCode: 401
+  statusText: Unauthorized
+  headers:
+    host: 127.0.0.1:8000
+    connection: close
+    x-powered-by: PHP/8.4.26
+    cache-control: no-cache, private
+    date: Wed, 07 Oct 2026 15:55:21 GMT
+    content-type: application/json
+    x-ratelimit-limit: "5"
+    x-ratelimit-remaining: "3"
+    access-control-allow-origin: "*"
+  body:
+    type: json
+    content: |-
+      {
+        "sukses": false,
+        "pesan": "Email atau kata sandi tidak sesuai"
+      }
+order: 4443207492850261

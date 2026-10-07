@@ -1,0 +1,40 @@
+$kind: http-example
+request:
+  url: http://127.0.0.1:8000/api/mahasiswa/2
+  method: DELETE
+  headers:
+    - key: Accept
+      value: application/json
+      disabled: false
+    - key: Content-Type
+      value: application/json
+      disabled: false
+    - key: Authorization
+      value: Bearer 7|Rr3Yy4Z0aIbV6VYJrJ0dlzhPHMw3fpz1UMwYuGdw41511008
+      disabled: true
+    - key: Authorization
+      value: Bearer 11|T3kXaB8mpJdF5AoRprUGOFwezaiYaRUEkMmwSvsz8fd76e28
+      disabled: true
+      description: ""
+  body:
+    type: json
+    content: ""
+response:
+  statusCode: 401
+  statusText: Unauthorized
+  headers:
+    host: 127.0.0.1:8000
+    connection: close
+    x-powered-by: PHP/8.4.26
+    cache-control: no-cache, private
+    date: Wed, 07 Oct 2026 15:53:45 GMT
+    content-type: application/json
+    access-control-allow-origin: "*"
+  body:
+    type: json
+    content: |-
+      {
+        "sukses": false,
+        "pesan": "Token tidak valid atau belum dikirim"
+      }
+order: 4461411032102882
