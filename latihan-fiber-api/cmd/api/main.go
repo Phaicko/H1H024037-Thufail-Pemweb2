@@ -15,8 +15,10 @@ import (
 
 func main() {
 	konf := config.Muat()
-	if konf.APIKey == "" {
-		log.Fatal("API_KEY belum dikonfigurasi")
+	config.HubungkanBasisData(konf)
+	config.Migrasi()
+	if err := config.DataAwal(); err != nil {
+		log.Fatal("Gagal membuat data awal: ", err)
 	}
 	app := fiber.New(fiber.Config{
 		AppName:      konf.NamaAplikasi,
@@ -26,7 +28,7 @@ func main() {
 	app.Use(logger.New())
 	app.Use(recoverer.New())
 	app.Use(middleware.WaktuProses())
-	router.Daftarkan(app, konf.APIKey)
+	router.Daftarkan(app)
 	app.Use(func(c fiber.Ctx) error {
 		return c.Status(fiber.StatusNotFound).JSON(fiber.Map{
 			"sukses": false,
